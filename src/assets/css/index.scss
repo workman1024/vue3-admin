@@ -1,0 +1,19 @@
+@import './h.scss';
+@import './ele.module.scss';
+@import './transition.scss';
+
+:root {
+  // --el-color-primary: blue; 
+}
+
+body {
+    height: 100%;
+    background-color: #f2f2f2;
+    min-width: 1500px;
+  }
+  #app {
+    height: 100%;
+  }
+  html {
+    height: 100%;
+  }

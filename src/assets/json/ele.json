@@ -1,0 +1,10 @@
+{
+    "menuText": "#fff",
+    "menuActiveText": "#de3ddd",
+    "subMenuActiveText": "#fff",
+    "menuBg": "#393D49",
+    "menuHover": "#42454e",
+    "subMenuBg": "#282b33",
+    "subMenuHover": "#34363d",
+    "sideBarWidth": "210px"
+}

@@ -1,0 +1,120 @@
+$menuText:#e3f2fd;
+$subMenuActiveText: #e3f2fd;
+$menuActiveText:#90caf9;
+$menuBg:#393D49;
+$menuHover:#42454e;
+$subMenuBg:#282b33;
+$subMenuHover:#34363d;
+$sideBarWidth: 210px;
+$sideBarStrongWidth:54px;
+.main-container {
+  min-height: 100%;
+  transition: margin-left .28s;
+  margin-left: $sideBarWidth;
+  position: relative;
+}
+.sidebar-container {
+    transition: width 0.28s;
+    width: $sideBarWidth !important;
+    background-color: $menuBg;
+    height: 100%;
+    position: fixed;
+    font-size: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    overflow: hidden;
+
+    // reset element-ui css
+    .horizontal-collapse-transition {
+      transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+    }
+
+    .scrollbar-wrapper {
+      overflow-x: hidden !important;
+    }
+
+    .el-scrollbar__bar.is-vertical {
+      right: 0px;
+    }
+
+    .el-scrollbar {
+      height: 100%;
+    }
+
+    &.has-logo {
+      .el-scrollbar {
+        height: calc(100% - 50px);
+      }
+    }
+
+    .is-horizontal {
+      display: none;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .svg-icon {
+      margin-right: 16px;
+    }
+
+    .sub-el-icon {
+      margin-right: 12px;
+      margin-left: -2px;
+    }
+
+    .el-menu {
+      border: none;
+      height: 100%;
+      width: 100% !important;
+    }
+
+    // menu hover
+    .submenu-title-noDropdown,
+    .el-sub-menu__title {
+      &:hover {
+        background-color: $menuHover !important;
+      }
+    }
+    
+    .is-active>.el-sub-menu__title {
+      color: $subMenuActiveText !important;
+    }
+
+    & .nest-menu .el-sub-menu>.el-sub-menu__title,
+    & .el-submenu .el-menu-item {
+      min-width: $sideBarWidth !important;
+      // background-color: $subMenuBg !important;
+
+      &:hover {
+        background-color: $subMenuHover !important;
+      }
+    }
+  }
+  .hideSidebar {
+    .strong-sidebar {
+      width: $sideBarStrongWidth !important;
+    }
+    .strong-main {
+      margin-left: $sideBarStrongWidth;
+    }
+    .el-sub-menu .el-sub-menu__icon-arrow {
+      right: 0;
+    }
+  }
+
+  :export {
+    menuText: $menuText;
+    menuActiveText: $menuActiveText;
+    subMenuActiveText: $subMenuActiveText;
+    menuBg: $menuBg;
+    menuHover: $menuHover;
+    subMenuBg: $subMenuBg;
+    subMenuHover: $subMenuHover;
+    sideBarWidth: $sideBarWidth;
+  }
