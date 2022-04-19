@@ -63,7 +63,7 @@ const hasOneShowingChild = (children = [], parent) => {
 const childrenShow = () => {
   const item = props.item;
   const ores = hasShowingChild(item.children, item)
-  const tres = !item.meta.singleShowChildren
+  const tres = !(item.meta.singleShowChildren && item.children.length == 1)
   return ores && tres;
 }
 

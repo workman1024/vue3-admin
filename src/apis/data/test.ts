@@ -6,7 +6,6 @@ export const getUserInfo = {
             name: 'Staff',
             component: 'Layout',
             redirect: '/staff',
-            alwaysShow: true,
             meta: { title: '员工管理', singleShowChildren: true, keepAlive: true },
             children: [{
                 path: 'index',
@@ -20,7 +19,6 @@ export const getUserInfo = {
             name: 'Finance',
             component: 'Layout',
             redirect: '/finance/manage',
-            alwaysShow: true,
             meta: { title: '财务管理', icon: 'caiwu' },
             children: [{
                 path: 'manage',

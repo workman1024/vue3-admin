@@ -14,7 +14,6 @@ const routes = [
 		name: 'Main',
 		component: Layout,
 		redirect: '/dashboard',
-		alwaysShow: true,
 		meta: { title: '首页', singleShowChildren: true, icon: 'dashboard' },
 		children: [{
 			path: 'dashboard',
